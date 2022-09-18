@@ -1,18 +1,18 @@
-export function localGet (key) {
-  const value = window.localStorage.getItem(key)
-  try {
-    return JSON.parse(window.localStorage.getItem(key))
-  } catch (error) {
-    return value
-  }
+export function localGet(key) {
+    const value = window.localStorage.getItem(key)
+    try {
+        return JSON.parse(window.localStorage.getItem(key))
+    } catch (error) {
+        return value
+    }
 }
 
-export function localSet (key, value) {
-  window.localStorage.setItem(key, JSON.stringify(value))
+export function localSet(key, value) {
+    window.localStorage.setItem(key, JSON.stringify(value))
 }
 
-export function localRemove (key) {
-  window.localStorage.removeItem(key)
+export function localRemove(key) {
+    window.localStorage.removeItem(key)
 }
 
 // 单张图片上传
@@ -21,15 +21,16 @@ export const uploadImgServer = 'http://localhost:28019/manage-api/v1/upload/file
 export const uploadImgsServer = 'http://localhost:28019/manage-api/v1/upload/files'
 
 export const pathMap = {
-  index: '首页',
-  login: '登录',
-  add: '添加商品',
-  swiper: '轮播图配置',
-  hot: '热销商品配置',
-  new: '新品上线配置',
-  recommend: '为你推荐配置',
-  category: '分类管理',
-  level2: '分类二级管理',
-  level3: '分类三级管理',
-  good: '商品管理',
+    index: '首页',
+    login: '登录',
+    add: '添加商品',
+    swiper: '轮播图配置',
+    hot: '热销商品配置',
+    new: '新品上线配置',
+    recommend: '为你推荐配置',
+    category: '分类管理',
+    level2: '分类二级管理',
+    level3: '分类三级管理',
+    good: '商品管理',
+    order: '订单管理',
 }
