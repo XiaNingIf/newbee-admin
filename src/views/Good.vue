@@ -83,9 +83,10 @@
     import { useRouter } from 'vue-router'
     import { getCurrentInstance } from 'vue'
     export default {
-        name: 'Good', // 养成好习惯，每次新建页面，都要对 name 进行语义化的编辑，对代码的整洁度很有帮助。
+        name: 'Good',
         setup() {
             const router = useRouter() // 获取路由实例，内涵路由相关的各种方法。
+            const app = getCurrentInstance()
             const state = reactive({
                 loading: false, // 列表数据接口返回前的 loadinig
                 tableData: [], // 数据列表
@@ -142,7 +143,7 @@
                 handleEdit,
                 getGoodList,
                 changePage,
-                handleStatus
+                handleStatus,
             }
         }
     }
